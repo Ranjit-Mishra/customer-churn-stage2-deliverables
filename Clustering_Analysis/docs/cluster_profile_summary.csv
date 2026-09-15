@@ -1,0 +1,5 @@
+Cluster,Customers,Churn Rate,Average Tenure,Average Monthly Charges,Senior Citizen Rate,Segment Label,Most Common Contract,Most Common Internet Service,Most Common Phone Service,Most Common Multiple Lines
+0,2058,0.448,12.474,73.752,0.0,High-risk newer customers,Month-to-month,DSL,Yes,No
+1,2037,0.112,29.059,26.463,0.0,Standard service customers,Month-to-month,DSL,Yes,No
+2,1806,0.135,58.195,88.183,0.0,Loyal long-term customers,Month-to-month,DSL,Yes,No
+3,1142,0.417,33.296,79.817,1.0,Higher-value service customers,Month-to-month,DSL,Yes,No

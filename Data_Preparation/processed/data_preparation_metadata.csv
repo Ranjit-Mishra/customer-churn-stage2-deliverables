@@ -1,0 +1,11 @@
+Item,Value
+Rows in original dataset,7043
+Columns in original dataset,10
+Rows in training set,5634
+Rows in testing set,1409
+Test size,0.2
+Target column,Churn
+Categorical columns encoded,"gender, Dependents, PhoneService, MultipleLines, InternetService, Contract"
+Numeric columns scaled,"SeniorCitizen, tenure, MonthlyCharges"
+Scaler used,StandardScaler
+Random state,42
