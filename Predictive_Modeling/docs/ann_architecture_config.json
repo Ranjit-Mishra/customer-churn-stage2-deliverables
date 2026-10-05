@@ -1,0 +1,75 @@
+{
+  "purpose": "Binary customer churn prediction",
+  "random_seed": 42,
+  "input_features": 16,
+  "layers": [
+    {
+      "name": "input",
+      "units": 16
+    },
+    {
+      "name": "dense_1",
+      "units": 32,
+      "activation": "relu"
+    },
+    {
+      "name": "dropout_1",
+      "rate": 0.2
+    },
+    {
+      "name": "dense_2",
+      "units": 16,
+      "activation": "relu"
+    },
+    {
+      "name": "dropout_2",
+      "rate": 0.2
+    },
+    {
+      "name": "output",
+      "units": 1,
+      "activation": "sigmoid"
+    }
+  ],
+  "compile": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "binary_crossentropy",
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "roc_auc"
+    ]
+  },
+  "training": {
+    "maximum_epochs": 100,
+    "batch_size": 32,
+    "validation_split": 0.2,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 10,
+    "restore_best_weights": true,
+    "class_weights": {
+      "0": 0.6806,
+      "1": 1.8843
+    }
+  },
+  "evaluation": {
+    "initial_decision_threshold": 0.5,
+    "required_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "precision",
+      "recall",
+      "f1_score",
+      "roc_auc",
+      "confusion_matrix"
+    ],
+    "success_targets": {
+      "roc_auc_minimum": 0.75,
+      "churn_recall_minimum": 0.65,
+      "churn_f1_minimum": 0.6,
+      "accuracy_minimum": 0.75
+    }
+  }
+}

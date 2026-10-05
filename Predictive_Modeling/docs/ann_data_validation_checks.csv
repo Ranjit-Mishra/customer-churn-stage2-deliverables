@@ -1,0 +1,11 @@
+Check,Status,Evidence
+Dataset loaded,PASS,"7,043 rows and 10 columns loaded from the official dataset."
+Missing values,PASS,0 missing values found.
+Target values,PASS,"Observed target values: ['No', 'Yes']."
+Identical rows,REVIEW,"302 identical rows (4.29%) were retained. The source has no customer identifier, so identical profiles cannot be proven to be accidental duplicates."
+Split integrity,PASS,"Training rows: 5,634; testing rows: 1,409; stratified 80/20 split."
+Target leakage,PASS,Churn is excluded from all model input features.
+Identifier leakage,PASS,No generated or source customer identifier is used as a model feature.
+Preprocessing fit,PASS,Encoder and scaler are fitted on training data only; the fitted pipeline is then applied to testing data.
+Feature alignment,PASS,Training and testing sets use the same 16 features in the same order.
+Finite model inputs,PASS,No missing or infinite values remain in the ANN model inputs.

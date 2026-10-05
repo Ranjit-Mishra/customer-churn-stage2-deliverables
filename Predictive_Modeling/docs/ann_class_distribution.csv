@@ -1,0 +1,7 @@
+Split,Class,Count,Percentage
+Full dataset,No churn,5174,73.46
+Full dataset,Churn,1869,26.54
+Training,No churn,4139,73.46
+Training,Churn,1495,26.54
+Testing,No churn,1035,73.46
+Testing,Churn,374,26.54

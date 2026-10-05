@@ -1,0 +1,17 @@
+Feature Order,Feature
+1,SeniorCitizen
+2,tenure
+3,MonthlyCharges
+4,gender_Female
+5,gender_Male
+6,Dependents_No
+7,Dependents_Yes
+8,PhoneService_No
+9,PhoneService_Yes
+10,MultipleLines_No
+11,MultipleLines_Yes
+12,InternetService_DSL
+13,InternetService_Fiber optic
+14,Contract_Month-to-month
+15,Contract_One year
+16,Contract_Two year

@@ -1,0 +1,13 @@
+Item,Value
+Source rows,7043
+Source columns,10
+Training rows,5634
+Testing rows,1409
+Input features after encoding,16
+Numeric columns scaled,"SeniorCitizen, tenure, MonthlyCharges"
+Categorical columns encoded,"gender, Dependents, PhoneService, MultipleLines, InternetService, Contract"
+Training churn rate,26.54%
+Testing churn rate,26.54%
+Exact duplicate rows retained,302
+Random state,42
+Test size,0.2
