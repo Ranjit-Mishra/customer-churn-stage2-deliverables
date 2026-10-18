@@ -1,0 +1,17 @@
+Feature,Importance Mean,Importance Standard Deviation
+tenure,0.205824,0.008335
+MonthlyCharges,0.117324,0.007298
+SeniorCitizen,0.005273,0.001507
+Contract_Two year,0.002288,0.001401
+PhoneService_No,0.002075,0.001117
+MultipleLines_Yes,0.001802,0.001078
+MultipleLines_No,0.001393,0.000999
+InternetService_Fiber optic,0.001133,0.001113
+InternetService_DSL,0.000972,0.001171
+Contract_One year,0.00061,0.000842
+Dependents_Yes,0.000472,0.002593
+PhoneService_Yes,0.000177,0.000745
+Contract_Month-to-month,-1.7e-05,0.000633
+Dependents_No,-9.4e-05,0.00048
+gender_Female,-0.000748,0.001157
+gender_Male,-0.001143,0.00078

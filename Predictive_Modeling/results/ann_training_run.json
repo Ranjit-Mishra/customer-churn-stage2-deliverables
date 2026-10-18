@@ -1,0 +1,18 @@
+{
+  "model_type": "scikit-learn MLPClassifier artificial neural network",
+  "architecture": "16 inputs -> Dense 32 ReLU -> Dense 16 ReLU -> Sigmoid probability output",
+  "overfitting_controls": [
+    "L2 regularisation alpha 0.001",
+    "20% validation split",
+    "early stopping with patience 10"
+  ],
+  "planned_dropout_note": "The implementation uses L2 regularisation rather than dropout because MLPClassifier does not expose dropout layers. This controlled change is documented and early stopping is retained.",
+  "epochs_completed": 19,
+  "training_seconds": 1.424,
+  "decision_threshold": 0.5,
+  "random_state": 42,
+  "class_weights": {
+    "0": 0.6806,
+    "1": 1.8843
+  }
+}
