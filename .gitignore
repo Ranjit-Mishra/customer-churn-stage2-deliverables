@@ -2,6 +2,7 @@
 __pycache__/
 .matplotlib_cache/
 *.pyc
+~$*
 Stage_2_Video_Demonstration_Script.docx
 *_Video_Demonstration_Script.docx
 *Reading_Script*.docx
