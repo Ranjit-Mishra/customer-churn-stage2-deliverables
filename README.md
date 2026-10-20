@@ -1,6 +1,6 @@
 # Customer Churn Analysis Project Deliverables
 
-This repository contains the completed Stage 2 submission and the developing Stage 3 predictive-modelling deliverables for the Customer Churn Analysis project for Advanced Telecommunications Solutions.
+This repository contains the completed Stage 2 and Stage 3 deliverables for the Customer Churn Analysis project for Advanced Telecommunications Solutions.
 
 ## Team
 
@@ -27,7 +27,7 @@ This repository contains the completed Stage 2 submission and the developing Sta
 | `Predictive_Modeling/models` | Saved trained artificial neural network model. |
 | `Predictive_Modeling/results` | Predictions, metrics, confusion matrix, training history, and feature importance. |
 | `Predictive_Modeling/visualisations` | ANN learning, performance, and interpretation charts. |
-| `Final_Report` | Draft report structure and business-analysis sections for Stage 3. |
+| `Final_Report` | Submission-ready final report and supporting business-analysis sections. |
 | `scripts` | Python scripts used to reproduce and verify the project outputs. |
 
 ## How to Run
@@ -73,6 +73,7 @@ Clustering Analysis:
 
 Predictive Modeling:
 
+- `Predictive_Modeling/docs/ANN_Model_Architecture_Training_and_Evaluation.docx`
 - `Predictive_Modeling/models/ann_mlp_model.joblib`
 - `Predictive_Modeling/results/ann_test_metrics.csv`
 - `Predictive_Modeling/results/ann_test_predictions.csv`
@@ -82,8 +83,9 @@ Predictive Modeling:
 - `Predictive_Modeling/visualisations/ann_confusion_matrix.png`
 - `Predictive_Modeling/docs/ann_model_evaluation_summary.md`
 
-Final Report Development:
+Final Report:
 
+- `Final_Report/Final_Report.docx`
 - `Final_Report/sections/churn_and_retention_factors.md`
 - `Final_Report/sections/targeted_retention_recommendations.md`
 - `Final_Report/sections/limitations_and_solutions.md`
@@ -109,10 +111,10 @@ The ANN data validation, architecture, training and evaluation are complete:
 - Met the project targets for churn recall and ROC-AUC; accuracy and F1-score remain below target and are documented as limitations.
 - Generated predictions, confusion matrix, learning charts, ROC and precision-recall curves, and permutation feature importance.
 
-The main evidence is in `Predictive_Modeling/docs/ANN_Data_Validation_and_Architecture_Plan.docx` and `Predictive_Modeling/docs/ann_model_evaluation_summary.md`.
+The main evidence is in `Predictive_Modeling/docs/ANN_Data_Validation_and_Architecture_Plan.docx`, `Predictive_Modeling/docs/ANN_Model_Architecture_Training_and_Evaluation.docx`, and `Final_Report/Final_Report.docx`.
 
-## Current Status and Limitations
+## Final Status and Limitations
 
 The original predictive-modelling member is unavailable, so the four active members redistributed the Stage 3 work. The source dataset also contains 302 identical rows but no true customer identifier. These rows are retained because identical customer profiles cannot be proven to be accidental duplicates.
 
-The model is a decision-support proof of concept, not a production system. Its 0.50 threshold has not been cost-optimised, predictive importance is not causal, and performance has not been validated on future or external customers. These limits and practical solutions are recorded in the final-report sections.
+The model is a decision-support proof of concept, not a production system. Its 0.50 threshold has not been cost-optimised, predictive importance is not causal, and performance has not been validated on future or external customers. These limits and practical solutions are recorded in the final report.

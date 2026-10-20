@@ -1,6 +1,8 @@
 from pathlib import Path
 
 import json
+import re
+import zipfile
 import pandas as pd
 from PIL import Image
 
@@ -37,6 +39,23 @@ def require_image(relative_path: str) -> None:
         if width < 600 or height < 400:
             raise AssertionError(f"Image resolution is too small: {relative_path}")
         image.verify()
+
+
+def require_docx_text(relative_path: str, phrases: list[str]) -> None:
+    path = require_file(relative_path, 10_000)
+    with zipfile.ZipFile(path) as archive:
+        document_xml = archive.read("word/document.xml").decode("utf-8")
+    text = re.sub(r"<[^>]+>", " ", document_xml)
+    text = re.sub(r"\s+", " ", text)
+    for phrase in phrases:
+        if phrase not in text:
+            raise AssertionError(f"Missing '{phrase}' in {relative_path}")
+    lowered = text.lower()
+    for private_marker in ("reading script", "private video", "recording script"):
+        if private_marker in lowered:
+            raise AssertionError(
+                f"Private meeting material marker found in public document: {relative_path}"
+            )
 
 
 def main() -> None:
@@ -119,11 +138,31 @@ def main() -> None:
         "Final_Report/sections/limitations_and_solutions.md",
         ["Proposed Solution", "Overall Limitation Statement"],
     )
+    require_docx_text(
+        "Predictive_Modeling/docs/ANN_Model_Architecture_Training_and_Evaluation.docx",
+        [
+            "Implemented ANN Architecture",
+            "Test Performance",
+            "Predictive Signals and Interpretation",
+            "Limitations and Decision",
+        ],
+    )
+    require_docx_text(
+        "Final_Report/Final_Report.docx",
+        [
+            "Executive Summary",
+            "ANN Architecture and Training",
+            "Targeted Retention Recommendations",
+            "Limitations and Proposed Solutions",
+            "Conclusion and Next Steps",
+        ],
+    )
 
-    print("Stage 3 progress verification passed.")
+    print("Stage 3 final verification passed.")
     print("- ANN model, metrics, predictions and six visuals are present and valid.")
     print("- Test predictions and confusion matrix both cover 1,409 records.")
-    print("- Business findings, recommendations and limitations are present.")
+    print("- ANN architecture evidence and the integrated final report are present.")
+    print("- Business findings, recommendations and limitations are complete.")
     print("- No private meeting-script markers were found in public report files.")
 
 
